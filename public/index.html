@@ -24,12 +24,19 @@
     font-size: 16px;
   }
 
-  #scores {
+  .main {
     position: absolute;
     width: 100%;
     top: 60px;
     left: 0px;
     height: calc(100% - 60px);
+  }
+
+  #winScreen {
+    background-image: url("winners.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 
   .team {
@@ -41,27 +48,82 @@
     line-height: 110%;
     text-align: center;
     color: white;
+    background-image: url("sbn/0.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .score0 {
+    background-image: url("sbn/0.png");
+  }
+
+  .score1 {
+    background-image: url("sbn/1.png");
+  }
+
+  .score2 {
+    background-image: url("sbn/2.png");
+  }
+
+  .score3 {
+    background-image: url("sbn/3.png");
+  }
+
+  .score4 {
+    background-image: url("sbn/4.png");
+  }
+
+  .score5 {
+    background-image: url("sbn/5.png");
+  }
+
+  .score6 {
+    background-image: url("sbn/6.png");
+  }
+
+  .score7 {
+    background-image: url("sbn/7.png");
+  }
+
+  .score8 {
+    background-image: url("sbn/8.png");
+  }
+
+  .score9 {
+    background-image: url("sbn/9.png");
   }
 
   #red {
     top: 10%;
-    background-color: #f44336;
+    background-color: #c42422;
   }
 
   #blue {
     top: 55%;
-    background-color: #008CBA;
+    background-color: #499cd2;
+  }
+
+  #winText {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    color: red;
+    text-align: center;
   }
   </style>
 </head>
 <body>
-  <div id="scores">
-    <div id="red" class="team">
-      <span id="redScore">0</span>
-    </div>
+  <div id="winScreen" class="main" style="display: none;">
+    <span id="winText"></span>
+  </div>
 
+  <div id="scoreScreen" class="main">
+    <div id="red" class="team">
+      <span id="redScore"></span>
+    </div>
     <div id="blue" class="team">
-      <span id="blueScore">0</span>
+      <span id="blueScore"></span>
     </div>
   </div>
   <div style="text-align:center;">
